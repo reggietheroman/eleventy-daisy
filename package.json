@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/styles.css",
     "build:11ty": "eleventy",
-    "build": "npm run build:css && npm run build:11ty",
+    "build": "pnpm run build:css && pnpm run build:11ty",
     "run:11ty": "eleventy --serve",
     "run:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/styles.css --watch",
     "start": "concurrently \"pnpm run run:11ty\" \"pnpm run run:css\"",
