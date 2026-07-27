@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* You should also put the ff in this file: */
+/* 1. Custom Theme Extensions */
+/* 2. Custom Global Base Styles */
+/* 3. Custom CSS Rules (Component Classes) */
