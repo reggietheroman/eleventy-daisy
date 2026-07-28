@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: synthwave --default;
+}
 
 /* You should also put the ff in this file: */
 /* 1. Custom Theme Extensions */
