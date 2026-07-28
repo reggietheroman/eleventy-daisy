@@ -1,0 +1,9 @@
+{{#each items as |item|}}
+  <div class="m-4">
+    {{> data-display/collapse
+      name="accordion-sample"
+      title=item.data.title
+      content=item.content
+    }}
+  </div>
+{{/each}}

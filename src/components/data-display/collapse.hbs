@@ -1,0 +1,11 @@
+---
+title: Eleventy Daisy | Collapse
+layout: base.hbs
+---
+
+<section>
+  {{> data-display/collapse
+    title=collections.faqs.[0].data.title
+    content=collections.faqs.[0].content
+  }}
+</section>

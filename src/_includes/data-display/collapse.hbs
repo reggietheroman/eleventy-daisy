@@ -1,0 +1,10 @@
+{{#if name}}
+  <details class="collapse bg-base-100 border-base-300 border" name={{ name }}>
+{{else}}
+  <details class="collapse bg-base-100 border-base-300 border">
+{{/if}}
+  <summary class="collapse-title font-semibold">{{ title }}</summary>
+  <div class="collapse-content text-sm">
+    {{{ content }}}
+  </div>
+</details>
