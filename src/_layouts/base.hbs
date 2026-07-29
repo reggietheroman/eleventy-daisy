@@ -18,7 +18,9 @@ title: Eleventy Daisy
     <main>
       <div class="@container">
         <div class="min-h-screen min-w-screen">
-          <div class="p-8">
+          {{> navigation/navbar}}
+
+          <div class="p-8 z-1">
             {{{ content }}}
           </div>
         </div>
