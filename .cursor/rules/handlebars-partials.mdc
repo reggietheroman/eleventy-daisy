@@ -1,0 +1,30 @@
+---
+description: Handlebars layouts and DaisyUI partial conventions
+globs: "**/*.{hbs,html}"
+alwaysApply: false
+---
+
+# Handlebars + DaisyUI
+
+## Layouts
+
+- Pages set `layout: base.hbs` (or `markdown.hbs` for prose).
+- `base.hbs` wraps `{{{ content }}}` and includes the navbar.
+- `markdown.hbs` nests in `base.hbs` and applies `prose`.
+
+## Partials
+
+- Path = location under `src/_includes/` without extension: `{{> navigation/navbar}}`.
+- Pass data as hash args; use `{{{ content }}}` when HTML must not be escaped.
+- Category folders: `data-display/`, `layout/`, `navigation/`.
+
+```hbs
+{{> data-display/collapse title=title content=html name="group"}}
+{{> data-display/accordion items=collections.faqs}}
+```
+
+## Styling
+
+- Prefer DaisyUI component classes (`btn`, `navbar`, `collapse`, `menu`, `steps`).
+- Match existing responsive patterns (e.g. mobile + desktop nav both updated together).
+- Site-wide CSS/theme changes go in `src/assets/css/input.css`, not inline `<style>` blocks.

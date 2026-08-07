@@ -1,0 +1,37 @@
+---
+description: Markdown collection content conventions for Eleventy
+globs: src/collections/**/*.md
+alwaysApply: false
+---
+
+# Content collections
+
+Files under `src/collections/<name>/` become Eleventy collections via frontmatter `tags`.
+
+## Blog-style (rendered pages)
+
+```yaml
+---
+title: Post title
+date: created
+tags: blog-posts
+layout: markdown.hbs
+---
+```
+
+## FAQ-style (data for partials)
+
+```yaml
+---
+title: Question text?
+tags: faqs
+---
+```
+
+Body markdown becomes `item.content`; title is `item.data.title`.
+
+## Rules
+
+- `tags` value must match the collection folder purpose (`blog-posts`, `faqs`, or a new agreed name).
+- New collection name → update any partial/page that references `collections.<tag>`.
+- Prefer `markdown.hbs` when the file should be its own URL with typography.

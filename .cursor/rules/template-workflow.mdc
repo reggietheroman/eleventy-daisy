@@ -1,0 +1,25 @@
+---
+description: How agents should scaffold or rebrand a site from this template
+alwaysApply: true
+---
+
+# Using this template
+
+When building or adapting a site from this starter, follow [AGENTS.md](../../AGENTS.md) “Using this repo as a template”.
+
+## Workflow (in order)
+
+1. Confirm site name, theme, and deploy target.
+2. Rebrand: `package.json`, `wrangler.toml`, layout/page titles, navbar brand.
+3. Set DaisyUI theme in `src/assets/css/input.css`.
+4. Shape `src/collections/` and update partials that read `collections.*`.
+5. Customize `src/_includes/`; remove unused `src/components/` demos if not a gallery.
+6. Replace `src/index.hbs`; sync navbar links (mobile + desktop).
+7. Verify with `pnpm start` / `pnpm build`.
+
+## Hard rules
+
+- UI lives in `_includes`, not copied into every page.
+- Keep using Handlebars partials + DaisyUI classes.
+- Use **pnpm** only; do not add npm/yarn lockfiles.
+- Do not commit `dist/` or `node_modules/`.

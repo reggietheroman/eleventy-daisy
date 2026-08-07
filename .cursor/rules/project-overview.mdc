@@ -1,0 +1,22 @@
+---
+description: Core project facts for eleventy-daisy (Eleventy + DaisyUI starter)
+alwaysApply: true
+---
+
+# eleventy-daisy overview
+
+Static-site starter: **Eleventy 3 + Handlebars + Tailwind 4 + DaisyUI 5**, managed with **pnpm**.
+
+- Source: `src/` → build output: `dist/`
+- Partials: `src/_includes/` via `{{> category/name}}`
+- Demo pages: `src/components/` (showcase partials; do not duplicate UI here)
+- Content: `src/collections/**/*.md` tagged into `collections.<tag>`
+- Theme entry: `src/assets/css/input.css`
+- Full agent guide: [AGENTS.md](../../AGENTS.md)
+
+## Commands
+
+- `pnpm start` — dev (Eleventy serve + Tailwind watch)
+- `pnpm build` — production CSS + Eleventy
+
+Prefer existing DaisyUI/Handlebars patterns. Do not switch SSG, templating, or CSS stack unless the user asks.
