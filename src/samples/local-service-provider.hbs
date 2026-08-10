@@ -1,0 +1,87 @@
+---
+layout: sample-base.hbs
+tags: samples
+title: Local Service Provider
+---
+
+<div class="min-h-screen bg-base-100 text-base-content">
+  <div class="navbar bg-base-200">
+    <div class="flex-1"><a href="/samples" class="btn btn-ghost text-xl font-bold">Apex Plumbing</a></div>
+    <div class="flex-none"><a href="#contact" class="btn btn-primary btn-sm">Emergency Call</a></div>
+  </div>
+
+  <div class="hero min-h-[70vh] bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-xl">
+        <h1 class="text-5xl font-bold">Fast & Reliable Plumbing Services</h1>
+        <p class="py-6">Available 24/7 for emergency repairs, drain cleaning, and pipe installations in the metro area.</p>
+        <a href="#contact" class="btn btn-primary btn-lg">Get Free Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-10 text-center">
+    <div class="stats stats-vertical lg:stats-horizontal shadow bg-base-200">
+      <div class="stat">
+        <div class="stat-title">Experience</div>
+        <div class="stat-value text-primary">12+ Years</div>
+        <div class="stat-desc">Serving local community</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Jobs Completed</div>
+        <div class="stat-value text-secondary">2,500+</div>
+        <div class="stat-desc">5-Star Customer Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Guarantee</div>
+        <div class="stat-value">100%</div>
+        <div class="stat-desc">Licensed & Insured</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-10 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card bg-base-100 border border-base-300 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title text-primary">Emergency Repairs</h3>
+          <p>Burst pipes, major leaks, and sewer backups handled rapidly day or night.</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border border-base-300 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title text-primary">Drain Cleaning</h3>
+          <p>Unclogging sinks, toilets, and main drain lines using modern hydro-jetting.</p>
+        </div>
+      </div>
+      <div class="card bg-base-100 border border-base-300 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title text-primary">Water Heater Installation</h3>
+          <p>Tankless and traditional water heater installation, replacement, and repair.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="py-12 bg-base-200">
+    <div class="max-w-md mx-auto card bg-base-100 p-6 shadow-xl">
+      <h3 class="text-2xl font-bold mb-4 text-center">Request a Quote</h3>
+      <form class="space-y-4">
+        <div>
+          <label class="label"><span class="label-text">Name</span></label>
+          <input type="text" placeholder="John Doe" class="input input-bordered w-full" />
+        </div>
+        <div>
+          <label class="label"><span class="label-text">Phone</span></label>
+          <input type="tel" placeholder="(555) 000-0000" class="input input-bordered w-full" />
+        </div>
+        <div>
+          <label class="label"><span class="label-text">How can we help?</span></label>
+          <textarea class="textarea textarea-bordered w-full" placeholder="Describe the issue..."></textarea>
+        </div>
+        <button type="button" class="btn btn-primary w-full">Submit Request</button>
+      </form>
+    </div>
+  </div>
+</div>

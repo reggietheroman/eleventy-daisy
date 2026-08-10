@@ -1,0 +1,67 @@
+---
+layout: sample-base.hbs
+tags: samples
+title: Event Venue Restaurant Booking
+---
+
+<div class="bg-base-100 min-h-screen">
+  <div class="hero min-h-[60vh] bg-neutral text-neutral-content">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-4xl font-bold">Annual Tech Summit 2026</h1>
+        <p class="py-4">Join 500+ developers and founders for a 1-day innovation conference.</p>
+
+        <div class="grid grid-flow-col gap-5 text-center auto-cols-max justify-center my-4">
+          <div class="flex flex-col p-2 bg-neutral-focus rounded-box text-neutral-content">
+            <span class="font-mono text-3xl">12</span> days
+          </div>
+          <div class="flex flex-col p-2 bg-neutral-focus rounded-box text-neutral-content">
+            <span class="font-mono text-3xl">08</span> hours
+          </div>
+          <div class="flex flex-col p-2 bg-neutral-focus rounded-box text-neutral-content">
+            <span class="font-mono text-3xl">45</span> mins
+          </div>
+        </div>
+
+        <a href="#register" class="btn btn-accent mt-4">Get Tickets</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">Event Schedule</h2>
+    <div class="tabs tabs-lifted justify-center">
+      <input type="radio" name="event_tabs" class="tab" aria-label="Morning Session" checked="checked" />
+      <div class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+        <ul class="space-y-4">
+          <li><strong>09:00 AM:</strong> Keynote Speech — Future of Web Development</li>
+          <li><strong>10:30 AM:</strong> Panel Discussion — Scaling SaaS Startups</li>
+        </ul>
+      </div>
+
+      <input type="radio" name="event_tabs" class="tab" aria-label="Afternoon Session" />
+      <div class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+        <ul class="space-y-4">
+          <li><strong>01:30 PM:</strong> Hands-on Workshop with Tailwind & DaisyUI</li>
+          <li><strong>04:00 PM:</strong> Networking & Drinks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="register" class="py-12 bg-base-200">
+    <div class="max-w-md mx-auto card bg-base-100 p-6 shadow-xl">
+      <h3 class="text-2xl font-bold mb-4 text-center">Reserve Your Ticket</h3>
+      <div class="form-control gap-4">
+        <input type="text" placeholder="Full Name" class="input input-bordered w-full" />
+        <input type="email" placeholder="Email Address" class="input input-bordered w-full" />
+        <select class="select select-bordered w-full">
+          <option disabled selected>Select Ticket Type</option>
+          <option>General Admission ($49)</option>
+          <option>VIP Pass ($149)</option>
+        </select>
+        <button class="btn btn-accent w-full mt-2">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>

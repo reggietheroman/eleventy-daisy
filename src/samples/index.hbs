@@ -1,0 +1,17 @@
+---
+layout: base.hbs
+title: Samples
+---
+
+<section>
+  <h1 class="text-2xl font-bold">Sample Websites</h1>
+  {{#each collections.samples as |sample|}}
+    <ul>
+      <li>
+        <a href="{{ sample.url }}">
+          <h2>{{ sample.data.title }}</h2>
+        </a>
+      </li>
+    </ul>
+  {{/each}}
+</section>

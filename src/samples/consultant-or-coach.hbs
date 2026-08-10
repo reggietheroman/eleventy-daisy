@@ -1,0 +1,80 @@
+---
+layout: sample-base.hbs
+tags: samples
+title: Consultant or Coach
+---
+
+<div class="bg-base-100 min-h-screen">
+  <div class="hero min-h-screen bg-base-100">
+    <div class="hero-content flex-col lg:flex-row-reverse gap-8 max-w-5xl">
+      <div class="avatar">
+        <div class="w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Consultant" />
+        </div>
+      </div>
+      <div>
+        <h1 class="text-5xl font-bold">Scale Your Business Without Burnout</h1>
+        <p class="py-6 text-lg">I help founder-led service companies double their revenue in 90 days by streamlining operations and building high-converting offer structures.</p>
+        <button onclick="booking_modal.showModal()" class="btn btn-primary btn-lg">Book a Free Strategy Call</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-12 bg-base-200">
+    <h2 class="text-3xl font-bold text-center mb-10">How We Work Together</h2>
+    <ul class="steps steps-vertical lg:steps-horizontal w-full max-w-4xl mx-auto flex justify-center">
+      <li class="step step-primary">Discovery Call</li>
+      <li class="step step-primary">Audit & Strategy</li>
+      <li class="step step-primary">Implementation</li>
+      <li class="step">Growth & Scale</li>
+    </ul>
+  </div>
+
+  <div class="py-16 max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Coaching Packages</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card border border-base-300 shadow-xl">
+        <div class="card-body">
+          <div class="badge badge-secondary">Popular</div>
+          <h3 class="card-title text-2xl">1-on-1 Growth Sprint</h3>
+          <p class="text-3xl font-bold my-2">$1,500 <span class="text-sm text-gray-500 font-normal">/ month</span></p>
+          <ul class="list-disc list-inside space-y-2 py-4">
+            <li>Weekly 60-min Strategy Calls</li>
+            <li>Custom Sales Pipeline Funnel</li>
+            <li>Direct Slack Support</li>
+          </ul>
+          <button onclick="booking_modal.showModal()" class="btn btn-outline btn-primary mt-auto">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="card border border-base-300 shadow-xl">
+        <div class="card-body">
+          <div class="badge badge-ghost">Enterprise</div>
+          <h3 class="card-title text-2xl">Full-Funnel Intensive</h3>
+          <p class="text-3xl font-bold my-2">$3,500 <span class="text-sm text-gray-500 font-normal">/ one-time</span></p>
+          <ul class="list-disc list-inside space-y-2 py-4">
+            <li>Full Business Operational Audit</li>
+            <li>2-Day In-Person or Remote Workshop</li>
+            <li>30 Days Follow-up Support</li>
+          </ul>
+          <button onclick="booking_modal.showModal()" class="btn btn-primary mt-auto">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="booking_modal" class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Book Your Discovery Call</h3>
+      <p class="py-2">Select a date or leave your details, and I will reach out within 24 hours.</p>
+      <input type="text" placeholder="Your Name" class="input input-bordered w-full mb-3" />
+      <input type="email" placeholder="Your Email" class="input input-bordered w-full mb-4" />
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-primary">Schedule Call</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+</div>

@@ -1,0 +1,60 @@
+---
+layout: sample-base.hbs
+tags: samples
+title: Store Boutique or Cafe
+---
+
+<div class="bg-base-100 min-h-screen">
+  <div class="alert alert-info rounded-none text-center justify-center">
+    <span>☕ Grand Opening Special: Get 20% off all artisanal coffees this week!</span>
+  </div>
+
+  <div class="hero min-h-[50vh]" style="background-image: url(https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200);">
+    <div class="hero-overlay bg-opacity-60 bg-black"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">The Corner Cafe</h1>
+        <p class="mb-5">Freshly roasted coffee, homemade pastries, and a warm atmosphere in the heart of downtown.</p>
+        <a href="#location" class="btn btn-primary">Visit Us Today</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="location" class="py-12 max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="card bg-base-200 p-6">
+      <h3 class="text-2xl font-bold mb-4">Hours & Location</h3>
+      <p class="font-semibold">Address:</p>
+      <p class="mb-4">123 Main Street, Suite 100, Cityville</p>
+      <p class="font-semibold">Store Hours:</p>
+      <ul class="text-sm space-y-1">
+        <li>Mon – Fri: 7:00 AM – 6:00 PM</li>
+        <li>Sat – Sun: 8:00 AM – 5:00 PM</li>
+      </ul>
+    </div>
+
+    <div class="carousel w-full rounded-box h-64 border">
+      <div id="item1" class="carousel-item w-full relative">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500" class="w-full object-cover" alt="Coffee" />
+      </div>
+      <div id="item2" class="carousel-item w-full relative">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" class="w-full object-cover" alt="Pastries" />
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-2xl mx-auto my-12 px-4">
+    <h3 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h3>
+    <div class="join join-vertical w-full">
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title text-xl font-medium">Do you offer Wi-Fi for remote workers?</div>
+        <div class="collapse-content"><p>Yes! High-speed Wi-Fi and plenty of power outlets are available for guests.</p></div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">Are pet dogs allowed?</div>
+        <div class="collapse-content"><p>We have a dog-friendly outdoor patio with water bowls and treats available.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
