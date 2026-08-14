@@ -23,7 +23,13 @@ Output is a static site in `dist/`. There is no app server or database.
 pnpm install
 pnpm start          # Eleventy --serve + Tailwind watch
 pnpm build          # CSS then Eleventy → dist/
+pnpm test           # Vitest (build + HTML) then Playwright smoke
+pnpm test:unit      # Vitest only
+pnpm test:e2e       # build then Playwright
+pnpm test:watch     # Vitest watch
 ```
+
+First-time e2e: `pnpm exec playwright install chromium`.
 
 Do not introduce npm/yarn lockfiles. Prefer `pnpm` for all scripts.
 
@@ -42,6 +48,8 @@ src/
     faqs/
   assets/css/        # Tailwind entry: input.css → dist/assets/css/styles.css
 eleventy.config.js   # Dir config, Handlebars plugin, image shortcode
+tests/               # Vitest build/HTML tests (outside src/)
+  e2e/               # Playwright smoke specs
 ```
 
 | Path | Role |
@@ -115,6 +123,19 @@ Change the DaisyUI theme name there. Add custom theme extensions / global rules 
 
 Use the `optimizedImage` async shortcode from `eleventy.config.js` when adding images under `src/`. It writes AVIF/WebP/JPEG to `dist/img/`.
 
+### Testing
+
+Two layers, both small. There is almost no application JS; tests assert the **built site**, not isolated Handlebars compiles.
+
+| Layer | Command | What it covers |
+|-------|---------|----------------|
+| Vitest | `pnpm test:unit` | `pnpm build` once, then `dist/` pages, CSS, layout/nav/partial HTML |
+| Playwright | `pnpm test:e2e` | Chromium smoke: home CSS, desktop nav, collapse open |
+
+- Add a Vitest assertion in `tests/build.test.js` or `tests/html.test.js` when you add a page, collection, or partial that should always render.
+- Add Playwright coverage in `tests/e2e/` only for CSS-driven interaction (dropdown, collapse, accordion).
+- CI runs `pnpm test` via `.github/workflows/ci.yml`.
+
 ### Navbar / site identity
 
 When rebranding, update brand strings and nav links in `src/_includes/navigation/navbar.hbs` and titles in layouts/pages. Keep mobile (`sm:hidden`) and desktop (`hidden sm:block`) menus in sync.
@@ -132,7 +153,7 @@ When the user wants a **new site from this starter**, follow this order:
 5. **Partials** — customize `_includes` for the product; remove unused demos under `src/components/` if the site is not a component gallery.
 6. **Home page** — replace `src/index.hbs` with the real first viewport; reuse `layout/hero`, `layout/footer`, etc. when they fit.
 7. **Nav** — point navbar links at real routes; drop component-gallery links unless still needed.
-8. **Verify** with `pnpm start` / `pnpm build`. Do not commit `dist/` or `node_modules/`.
+8. **Verify** with `pnpm start` / `pnpm build` / `pnpm test`. Do not commit `dist/` or `node_modules/`.
 
 ### Do / don't for template consumers
 

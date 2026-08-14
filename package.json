@@ -10,8 +10,12 @@
     "run:11ty": "eleventy --serve",
     "run:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/styles.css --watch",
     "start": "concurrently \"pnpm run run:11ty\" \"pnpm run run:css\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run && playwright test",
+    "test:unit": "vitest run",
+    "test:e2e": "pnpm build && playwright test",
+    "test:watch": "vitest"
   },
+  "packageManager": "pnpm@11.5.2",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -32,5 +36,11 @@
     "concurrently": "^10.0.4",
     "daisyui": "^5.7.4",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "linkedom": "^0.18.13",
+    "serve": "^14.2.6",
+    "vitest": "^4.1.10"
   }
 }
